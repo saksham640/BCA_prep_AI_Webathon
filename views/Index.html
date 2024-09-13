@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BCA Solutions - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        header {
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            background: url('your-background-image.jpg') no-repeat center/cover;
+            position: relative; /* Add relative positioning */
+        }
+
+        header .header-img {
+            position: absolute;
+            left: 0; /* Align the image to the left */
+            top: 50%; /* Center the image vertically */
+            transform: translateY(-130%); /* Adjust the position to truly center vertically */
+            height: 60px; /* Adjust the size of the image */
+            width: auto; /* Maintain aspect ratio */
+            z-index: 1; /* Ensure the image is below other elements */
+        }
+
+        header h2 {
+            display: grid;
+            align-items: center;
+            height: 70px;
+            width: 50%;
+            margin: 0 auto;
+            font-size: 3em;
+            letter-spacing: 2px;
+            border-radius: 20px;
+            background-color: rgba(255, 111, 97, 0.8);
+        }
+
+        nav ul {
+            border: solid rgb(158, 69, 47);
+            align-items: center;
+            height: 40px;
+            background-color: #ff6d61;
+            list-style: none;
+            padding: 10px;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            transition: transform 0.3s;
+        }
+
+        nav ul li:hover {
+            font-size: 30px;
+            border-radius: 30px;
+            background-color: #753838;
+        }
+
+        .hero-section {
+
+            margin-top: 5px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffecd2);
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .hero-section .welcome {
+            margin-bottom: 10px;
+        }
+
+        .hero-section h2 {
+            margin-bottom: 49px;
+            font-size: 3.5em;
+            color: #ff6f61;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            animation: bounce 1.5s infinite;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            color: #fff;
+            margin-bottom: 20px;
+            animation: flash 2s infinite;
+            margin-top: -10px; /* Move text up */
+        }
+
+        .btn-primary {
+            background-color: #ff6f61;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            transition: background-color 0.4s, transform 0.4s;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary img.btn-icon {
+            width: 20px; /* Adjust the size as needed */
+            height: 20px; /* Adjust the size as needed */
+            margin-right: 8px; /* Space between icon and text */
+        }
+
+        .btn-primary:hover {
+            background-color: #ff3d3d;
+            transform: scale(1.1);
+        }
+
+        .submit-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-submit {
+
+            background-color: #ff6f61;
+            font-family: 'Press Start 2P', cursive;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            width: 140px;
+            border-radius: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.4s, transform 0.4s;
+        }
+
+        .btn-submit:hover {
+            background-color: #ff3d3d;
+            transform: scale(1.1);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 24px 180px;
+            position: relative;
+            width: 60%;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 15px 20px;
+            border: 2px solid #ff6f61;
+            border-radius: 30px;
+            width: 100%;
+            font-size: 1.1em;
+            outline: none;
+            font-family: 'Press Start 2P', cursive; /* Match font with h2 */
+        }
+
+        .search-bar input[type="text"]::placeholder {
+            color: #ff6f61;
+            font-size: 1.1em; /* Adjust placeholder font size */
+            text-align: center;
+            font-family: 'Press Start 2P', cursive; /* Match font with h2 */
+        }
+
+        .search-bar .search-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            left: 10px;
+        }
+
+        .search-bar .search-btn img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .button-group {
+            border: 0;
+            margin-bottom: 0px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes flash {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+
+        .feature {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 28%;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        .feature img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 13px;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .welcome {
+            font-size: 10px;
+            margin-bottom: 109px;
+        }
+
+        .stop {
+            font-size: 15px;
+        }
+
+        .group{
+
+            margin-bottom: 250px;
+        }
+
+        .output-box {
+            
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #ff6f61;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 60%;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="your-image.png" alt="Decorative Image" class="header-img">
+        <h2>BCA Solutions</h2>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Syllabus.html">Syllabus</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="group">
+        <div class="stop"><p>Your One-Stop Destination for BCA Learning</p></div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search your problem here">
+            <button class="search-btn">
+                <img src="image_copy.png" alt="Search">
+            </button>
+        </div>
+
+        <div class="submit-button-container">
+            <button class="btn-submit">Submit</button>
+        </div>
+
+        <div class="output-box"></div>
+            <!-- Output will be displayed here -->
+            <p>Results will be shown here...</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <a href="#courses" class="btn-primary">
+                <img src="book.png" alt="Explore Courses Icon" class="btn-icon">
+                Questions
+            </a>
+            <a href="#teachers" class="btn-primary">
+                <img src="book.png" alt="Meet Teachers Icon" class="btn-icon">
+                Short notes 
+            </a>
+            <a href="#resources" class="btn-primary">
+                <img src="book.png" alt="Browse Resources Icon" class="btn-icon">
+                Browse Resources
+            </a>
+            <a href="#testimonials" class="btn-primary">
+                <img src="book.png" alt="Testimonials Icon" class="btn-icon">
+                Quick Solutions
+            </a>
+        </div>
+        
+    </div>
+          
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <img width="200px" src="Teacher.jpg" alt="Feature 1">
+            <h3>Expert Teachers</h3>
+            <p>Learn from top educators with years of experience.</p>
+        </div>
+        <div class="feature">
+            <img src="Laptop.png" alt="Feature 2">
+            <h3>Comprehensive Courses</h3>
+            <p>All the subjects and materials you need to excel in BCA.</p>
+        </div>
+        <div class="feature">
+            <img src="image.png" alt="Feature 3">
+            <h3>Interactive Learning</h3>
+            <p>Engage with peers and teachers through live sessions.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 BCA Solutions | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

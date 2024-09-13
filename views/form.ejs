@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Query</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+        }
+        button {
+            padding: 10px;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submit a Query</h1>
+    
+    <!-- Form for inputting the query -->
+    <form action="/submit" method="POST">
+        <label for="userQuery">Enter your query:</label>
+        <input type="text" id="userQuery" name="userQuery" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display the API response -->
+    <% if (userResponse) { %>
+        <div class="response">
+            <h2>Response:</h2>
+            <p><%= userResponse %></p>
+        </div>
+    <% } %>
+</body>
+</html>

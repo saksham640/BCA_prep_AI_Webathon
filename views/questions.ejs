@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BCA Solutions - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        header {
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            background: url('your-background-image.jpg') no-repeat center/cover;
+            position: relative; /* Add relative positioning */
+        }
+
+        header .header-img {
+            position: absolute;
+            left: 0; /* Align the image to the left */
+            top: 50%; /* Center the image vertically */
+            transform: translateY(-130%); /* Adjust the position to truly center vertically */
+            height: 60px; /* Adjust the size of the image */
+            width: auto; /* Maintain aspect ratio */
+            z-index: 1; /* Ensure the image is below other elements */
+        }
+
+        header h2 {
+            display: grid;
+            align-items: center;
+            height: 70px;
+            width: 50%;
+            margin: 0 auto;
+            font-size: 3em;
+            letter-spacing: 2px;
+            border-radius: 20px;
+            background-color: rgba(255, 111, 97, 0.8);
+        }
+
+        nav ul {
+            border: solid rgb(158, 69, 47);
+            align-items: center;
+            height: 40px;
+            background-color: #ff6d61;
+            list-style: none;
+            padding: 10px;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            transition: transform 0.3s;
+        }
+
+        nav ul li:hover {
+            font-size: 30px;
+            border-radius: 30px;
+            background-color: #753838;
+        }
+
+        .hero-section {
+            margin-top: 5px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffecd2);
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .footer {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 16px;
+            position: absolute;
+            top: 16px; /* Align the search bar to the top */
+            left: 16px; /* Align the search bar to the left */
+            width: 50%;
+            z-index: 2; /* Ensure the search bar is above other elements */
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px 15px;
+            border: 2px solid #ff6f61;
+            border-radius: 25px;
+            width: 100%;
+            font-size: 0.9em;
+            outline: none;
+            font-family: 'Press Start 2P', cursive; /* Match font with h2 */
+        }
+
+        .search-bar input[type="text"]::placeholder {
+            color: #ff6f61;
+            font-size: 0.9em; /* Adjust placeholder font size */
+            text-align: center;
+            font-family: 'Press Start 2P', cursive; /* Match font with h2 */
+        }
+
+        .search-bar .search-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            left: 10px;
+        }
+
+        .search-bar .search-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .image {
+            position: absolute;
+            top: 80px; /* Adjust this value to fit the PNG below the search bar */
+            left: 0; /* Align the image to the left */
+            width: 150px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0;
+            z-index: 1; /* Ensure the image is below the search bar */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="your-image.png" alt="Decorative Image" class="header-img">
+        <h2>BCA Solutions</h2>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="Syllabus.html">Syllabus</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-section">
+        <div class="search-bar">
+            <input type="text" placeholder="Search your problem here">
+            <button class="search-btn">
+                <img src="image_copy.png" alt="Search">
+            </button>
+        </div>
+        <div class="image"><img width="400px" src="photo.png" alt=""></div>
+
+        <div class="outputBox"></div>
+            <%if(userResponse){%>
+                <h1><%=userResponse%></h1>
+                <%}%>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 BCA Solutions | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
