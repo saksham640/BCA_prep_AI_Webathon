@@ -140,5 +140,5 @@ app.post("/shortNotes",async (req,res)=>{
 })
 
 app.get("/about",(req,res)=>{
-    res.render("aboutUs.ejs");
+    res.render("aboutus.ejs");
 })
