@@ -93,4 +93,48 @@ app.listen(port, () => {
 
 app.get("/questions",(req,res)=>{
     res.render("questions.ejs",{userResponse:null});
+});
+app.post("/questions",async (req,res)=>{
+    const userQuery = `Please return 10 MCQ questions related to ${req.body.userQuery} in a list format`; // Get the user input from the form
+
+    if (!userQuery) {
+        return res.render("questions.ejs", { userResponse: "Query cannot be empty!" });
+    }
+
+    try {
+        const sessionId = await createChatSession();
+        const queryResponse = await submitQuery(sessionId, userQuery);
+        
+        const userResponse = queryResponse.data.answer;
+        
+        res.render("questions", { userResponse }); // Render the form with the response from the API
+    } catch (error) {
+        console.error("Error in querying:", error);
+        res.render("questions", { userResponse: "Error querying the API." });
+    }
+
+});
+
+app.get("/shortNotes",(req,res)=>{
+    res.render("shortNotes.ejs",{userResponse:null});
+})
+
+app.post("/shortNotes",async (req,res)=>{
+    const userQuery = `Please return a summary related to ${req.body.userQuery} in about 150 words`; // Get the user input from the form
+
+    if (!userQuery) {
+        return res.render("shortNotes.ejs", { userResponse: "Query cannot be empty!" });
+    }
+
+    try {
+        const sessionId = await createChatSession();
+        const queryResponse = await submitQuery(sessionId, userQuery);
+        
+        const userResponse = queryResponse.data.answer;
+        
+        res.render("shortNotes", { userResponse }); // Render the form with the response from the API
+    } catch (error) {
+        console.error("Error in querying:", error);
+        res.render("shortNotes", { userResponse: "Error querying the API." });
+    }
 })
