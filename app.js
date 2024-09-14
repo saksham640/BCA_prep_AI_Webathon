@@ -138,3 +138,7 @@ app.post("/shortNotes",async (req,res)=>{
         res.render("shortNotes", { userResponse: "Error querying the API." });
     }
 })
+
+app.get("/about",(req,res)=>{
+    res.render("aboutUs.ejs");
+})

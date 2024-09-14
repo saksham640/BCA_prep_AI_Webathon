@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BCA Solutions - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            background: url('your-background-image.jpg') no-repeat center/cover;
+            padding: 15px;
+            position: relative;
+        }
+
+        header .header-img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-130%);
+            height: 60px;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 3em;
+            background-color: rgba(255, 111, 97, 0.8);
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #ff6d61;
+            padding: 10px;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        nav ul li:hover {
+            background-color: #753838;
+            border-radius: 30px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #ff9a9e, #ffecd2);
+            padding: 50px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-left: 50px;
+            color: #ff6f61;
+        }
+
+        .hero-text h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+
+            font-size: 20px;
+            color: white;
+            margin: 10px 0;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            height: 300px;
+            border-radius: 15px;
+        }
+
+        .btn-primary {
+            background-color: #ff6f61;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.4s, transform 0.4s;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff3d3d;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="your-image.png" alt="Decorative Image" class="header-img">
+        <h2>BCA Solutions</h2>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="Syllabus.html">Syllabus</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <!-- Team Text Section -->
+        <div class="hero-text">
+            <u><h2>Web Wizards</h2></u><br>
+            
+            <p>Saksham Gupta(Backend Developer)<br><br>
+                Sidhant Pandey(Data Management)<br><br>
+                Saransh Jaggi(Frontend Developer)<br><br>
+                Sanyam Kumar(Frontend Developer)<br><br>
+
+            </p>
+        </div>
+        
+        <!-- Image Section -->
+        <div class="hero-image">
+            <img src="team.png" alt="Team Image">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 BCA Solutions | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
