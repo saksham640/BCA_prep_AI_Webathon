@@ -153,6 +153,39 @@
         .feature:hover {
             transform: scale(1.1);
         }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+
+        .feature {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 28%;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        .feature img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 13px;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+
 
         footer {
             background-color: #ff6f61;
@@ -189,7 +222,7 @@
         </div>
         </form>
         <div class="button-group">
-            <a href="/questions" class="btn-primary">Questions</a>
+            <a href="/question" class="btn-primary">Questions</a>
             <a href="#teachers" class="btn-primary">Short notes</a>
             <a href="#resources" class="btn-primary">Browse Resources</a>
             <a href="#testimonials" class="btn-primary">Quick Solutions</a>
@@ -202,6 +235,24 @@
         </div>
 
     </section>
+    <section class="features">
+        <div class="feature">
+            <img width="200px" src="Teacher.jpg" alt="Feature 1">
+            <h3>Expert Teachers</h3>
+            <p>Learn from top educators with years of experience.</p>
+        </div>
+        <div class="feature">
+            <img src="Laptop.png" alt="Feature 2">
+            <h3>Comprehensive Courses</h3>
+            <p>All the subjects and materials you need to excel in BCA.</p>
+        </div>
+        <div class="feature">
+            <img src="image.png" alt="Feature 3">
+            <h3>Interactive Learning</h3>
+            <p>Engage with peers and teachers through live sessions.</p>
+        </div>
+    </section>
+
 
     
 
